@@ -1,0 +1,19 @@
+body{
+  background-color:#87FF74;
+  overflow:hidden;
+}
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+  width:600px;
+  height:600px;
+}
+
+svg{
+  position:absolute;
+}

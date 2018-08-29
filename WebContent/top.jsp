@@ -21,14 +21,14 @@
 <tr>
 <td>
 <div style="text-align:center;padding:8px;">
-<h2 id="logo"><a href="seat.jsp">PUSHPOP</a></h2>
+<h2 id="logo"><a href="seat.jsp">FRUIT</a></h2>
 </div>
 </td>
 </tr>
 
 <tr>
 <td style="border-bottom:1px solid white;border-top:1px solid white">
-<div id="top">
+<!-- <div id="top">
 
  <ul class="area">
 <li class="item">
@@ -43,7 +43,7 @@
 </li>
 </ul>
 
-</div>
+</div> -->
 </td>
 </tr>
 </table>

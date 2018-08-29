@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset ="UTF-8">
-<title>자리 배치</title>
+<title>이벤트 사이트</title>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -33,7 +33,7 @@ body,html{
 %>
 
 
-<table id="main" width="100%"  border="1" cellspacing="0" style="border:1px solid black;background-image:url('webImage/wall.jpg');background-repeat:repeat;">
+<table id="main" width="100%"  border="0" cellspacing="0" >
 <tr>
 	<td>
 		<jsp:include page="top.jsp" flush="false"/>
