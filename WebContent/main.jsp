@@ -6,6 +6,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/button.css">
+<link rel="stylesheet" href="css/resultPage.css">
+
 <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css'>
 
 </head>
@@ -22,5 +24,24 @@
 <a href="javascript:void(0);">Mango</a>
 
 </section>
+
+<section>
+
+<div id="container">
+  <div id="beaker">
+    <div id="liquid">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+    </div>
+  </div>
+</div>
+
+</section>
+
 </body>
 </html>

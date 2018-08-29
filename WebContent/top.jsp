@@ -21,7 +21,7 @@
 <tr>
 <td>
 <div style="text-align:center;padding:8px;">
-<h2 id="logo"><a href="seat.jsp">FRUIT</a></h2>
+<!-- <h2 id="logo"><a href="seat.jsp">FRUIT</a></h2> -->
 </div>
 </td>
 </tr>

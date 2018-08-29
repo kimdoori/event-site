@@ -7,9 +7,6 @@
 <meta charset ="UTF-8">
 <title>이벤트 사이트</title>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
 <style>
 body,html{
 	width:100%;
@@ -20,9 +17,7 @@ body,html{
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;      
 }
-#main{
-	
-}
+
 </style>
 </head>
 <body>
@@ -42,7 +37,7 @@ body,html{
 </tr> 
 <tr height="850px" >
 	
-	<td width=85% valign="top">
+	<td width=100% valign="top">
 		<jsp:include page="<%= contentpage %>"></jsp:include>
 	</td>
 	
