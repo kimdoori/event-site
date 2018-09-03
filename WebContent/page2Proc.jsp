@@ -1,3 +1,5 @@
+<%@page import="model.Fruit"%>
+<%@page import="database.FruitDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <html>
@@ -20,12 +22,21 @@
 
 </head>
 <body>
+<%
+	Fruit fruit = FruitDAO.getInstance().select();
+
+%>
 
 	<section id="fruit-button-container">
-		<a id="0" class="fruit">Banana</a> <a id="1" class="fruit">Blueberry</a>
-		<a id="2" class="fruit">Strawberry</a> <a id="3" class="fruit">Pineapple</a>
-		<a id="4" class="fruit">Kiwi</a> <a id="5" class="fruit">Orange</a> <a
-			id="6" class="fruit">Peach</a> <a id="7" class="fruit">Mango</a>
+	
+		<%
+			String[] fruitStr = fruit.getFruit();
+			for(int i=0;i<fruitStr.length;i++){
+				out.println("<a id = '"+i+"' class='fruit'>"+fruitStr[i]+"</a>");
+			}
+		
+		%>
+		
 
 	</section>
 
@@ -50,6 +61,5 @@
 	<button class="go-button" onclick="prev()">Prev</button>
 
 	<button class="go-button" onclick="go()">GO</button>
-
 </body>
 </html>

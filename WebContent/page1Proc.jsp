@@ -20,14 +20,16 @@ function go(){
 </script>
 </head>
 <body>
-<span id="title"><strong>JUJU</strong></span>
-<h3>신 메뉴 출시 </h3>
-새로 출시된 메뉴의 재료를 모두 맞추시면 한 잔 무료 쿠폰을 드립니다. 
+<div class="wrap">
+	
+	<span id="title"><strong>JUJU</strong></span>
+	<h3>신 메뉴 출시 </h3>
+	새로 출시된 메뉴의 재료를 모두 맞추시면 한 잔 무료 쿠폰을 드립니다. 
+	
+	<br>
+	<button class="go-button" onclick="go()">GO</button>
+	
 
-<br>
-<button class="go-button" onclick="go()">GO</button>
-
-
-
+</div>
 </body>
 </html>

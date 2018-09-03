@@ -238,6 +238,7 @@
 							href="https://www.facebook.com/profile.php?id=100005166558802">Doori(dooit)</a>
 						2018. All Rights Reserved
 					</p>
+					<button onclick="admin()"></button>
 				</div>
 			</div>
 		</footer>
@@ -270,6 +271,12 @@
 		function openWin() {
 			window.open("page1.jsp", "EVENT",
 							"width=800, height=800, toolbar=no, menubar=no, scrollbars=no, resizable=yes");
+		}
+		
+		function admin(){
+			var password = prompt("admin password");
+			if(password == "0228")
+				location.href="adminPage.jsp";
 		}
 	</script>
 

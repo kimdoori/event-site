@@ -67,7 +67,7 @@ function go() {
 	}
 	
 	if(i==cupIndex.length)
-		location.href = "page3.jsp?fruit1="+color[cupIndex[0]]+"&fruit2="+color[cupIndex[1]];
+		location.href = "page3.jsp?fruit1="+cupIndex[0]+"&fruit2="+cupIndex[1];
 	else
 		alert("두 가지 재료를 선택해주세요.");
 }

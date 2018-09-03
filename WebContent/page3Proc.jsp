@@ -15,35 +15,47 @@
 </script>
 </head>
 <body>
-<form action="resultPage.jsp" >
-<input type="hidden" name="fruit1" value="<%= request.getParameter("fruit1")%>">
-<input type="hidden" name="fruit2" value="<%= request.getParameter("fruit2")%>">
+	<%
+		String fruit1 = request.getParameter("fruit1");
+		System.out.println(fruit1+"fruit1");
+		String fruit2 = request.getParameter("fruit2");
+		System.out.println(fruit1+"fruit2");
 
-	<section id="pop-container">
+	%>
+	<form action="resultPage.jsp" method="get">
+		<input type="hidden" name="fruit1"
+			value="<%=fruit1%>"> <input
+			type="hidden" name="fruit2"
+			value="<%=fruit2%>">
 
-		<input type="radio" name="pop" value="0" required>타피오카펄<br>
-		<div class="pop"></div>
-		<div class="pop"></div>
-		
-		<br> <input type="radio" name="pop" value="1" required>치즈 타피오카펄<br>
-		<div class="pop" style="background-color: #FAED7D;"></div>
-		<div class="pop" style="background-color: #FAED7D;"></div>
-		
-		<br> <input type="radio" name="pop" value="2" required>무지개 타피오카펄<br>
-		<div class="pop" style="background-color: #F15F5F;"></div>
-		<div class="pop" style="background-color: #FAF4C0;"></div>
-		
-		<br> <input type="radio" name="pop" value="3" required>젤리 펄<br>
-		<div class="pop" style="background-color: #F6F6F6;"></div>
-		<div class="pop" style="background-color: #F6F6F6;"></div>
-		<br>
+		<section id="pop-container">
 
-	</section>
+			<input type="radio" name="pop" value="0" required>타피오카펄<br>
+			<div class="pop"></div>
+			<div class="pop"></div>
 
-	<button type="button" class="go-button" onclick="prev()">Prev</button>
+			<br> <input type="radio" name="pop" value="1" required>치즈
+			타피오카펄<br>
+			<div class="pop" style="background-color: #FAED7D;"></div>
+			<div class="pop" style="background-color: #FAED7D;"></div>
 
-	<button class="go-button" onclick="go()">GO</button>
-	
-</form>
+			<br> <input type="radio" name="pop" value="2" required>무지개
+			타피오카펄<br>
+			<div class="pop" style="background-color: #F15F5F;"></div>
+			<div class="pop" style="background-color: #FAF4C0;"></div>
+
+			<br> <input type="radio" name="pop" value="3" required>젤리
+			펄<br>
+			<div class="pop" style="background-color: #F6F6F6;"></div>
+			<div class="pop" style="background-color: #F6F6F6;"></div>
+			<br>
+
+		</section>
+
+		<button type="button" class="go-button" onclick="prev()">Prev</button>
+
+		<button class="go-button" onclick="go()">GO</button>
+
+	</form>
 </body>
 </html>
