@@ -1,3 +1,9 @@
+body, html{
+	padding:0px;
+	margin:0px;
+	
+}
+
 .go-button {
 	width: 10em;
 	height: 4em;
@@ -6,4 +12,13 @@
 	padding: 0.5em;
 	border-radius: 2em;
 	margin-top: 5em;
+}
+#title {
+	margin: 50px auto;
+	display:inline-block;
+	font-size: 30px;
+	font-family: 'Kaushan Script', cursive;
+	line-height: 20px;
+	color: #fddc57;
+	
 }
