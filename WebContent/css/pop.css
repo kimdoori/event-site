@@ -1,0 +1,12 @@
+.pop{
+	background-color: #42000F;
+	width: 30px;
+	height: 30px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	display:inline-block;
+	margin:0.5em;
+}
+#pop-container{
+	text-align:center;
+}

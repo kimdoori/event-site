@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="css/page1.css">
+<link rel="stylesheet" href="css/page.css">
 <script>
 function go(){
 	location.href="page2.jsp";

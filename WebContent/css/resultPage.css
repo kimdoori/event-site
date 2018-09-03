@@ -40,14 +40,21 @@
 #beaker:after {
   right: -50px;
 }
-
-#liquid {
+#liquid-top{
   background-color: #d9fff4;
   border: 10px solid #d9fff4;
   border-radius: 0 0 20px 20px;
   bottom: 0;
   height: 270px;
   overflow: hidden;
+  width: 180px;
+}
+#liquid {
+  background-color: #d9fff4;
+  border: 10px solid #d9fff4;
+  border-radius: 0 0 20px 20px;
+  bottom: 0;
+  height: 135px;
   width: 180px;
 }
 
@@ -62,6 +69,19 @@
   -webkit-transform: rotate(15deg);
   width: 110px;
 }
+
+#liquid-top:after {
+  background-color: rgba(255, 255, 255, 0.25);
+  bottom: -10px;
+  content: '';
+  height: 300px;
+  left: -40px;
+  position: absolute;
+  transform: rotate(30deg);
+  -webkit-transform: rotate(15deg);
+  width: 110px;
+}
+
 
 #liquid .bubble {
   -webkit-animation-name: bubble;

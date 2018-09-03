@@ -17,18 +17,17 @@ body, html {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-.main-container{
-	border:2px solid black;
-	border-radius:2em;
-	width:90%;
-	height:50%;
-	padding:3em;
-	display:inline-block;
-	margin:0 auto;
-	text-align:center;
-	
-}
 
+.main-container {
+	border: 2px solid black;
+	border-radius: 2em;
+	width: 90%;
+	height: 50%;
+	padding: 3em;
+	display: inline-block;
+	margin: 0 auto;
+	text-align: center;
+}
 </style>
 </head>
 <body>
@@ -38,23 +37,9 @@ body, html {
 	%>
 
 
-	<table id="main" width="100%" border="0" cellspacing="0">
-		<tr>
-			<td><jsp:include page="top.jsp" flush="false" /></td>
-		</tr>
-		<tr height="850px">
-
-			<td width=100% valign="top" style="text-align: center;">
-				<div class="main-container">
-
-					<jsp:include page="<%=contentpage%>"></jsp:include>
-				</div>
-			</td>
 
 
-		</tr>
-
-	</table>
+	<jsp:include page="<%=contentpage%>"></jsp:include>
 
 
 
