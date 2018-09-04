@@ -1,3 +1,4 @@
+<%@page import="model.Pop"%>
 <%@page import="java.util.UUID"%>
 <%@page import="model.Fruit"%>
 <%@page import="database.FruitDAO"%>
@@ -22,15 +23,20 @@
 
 		<%
 			Fruit fruit = FruitDAO.getInstance().select();
+			Pop pop = FruitDAO.getInstance().selectPop();
 
 			int fruit1 = Integer.valueOf(request.getParameter("fruit1"));
 			int fruit2 = Integer.valueOf(request.getParameter("fruit2"));
-			int pop_index = Integer.valueOf(request.getParameter("pop"));
+			int choice_pop = Integer.valueOf(request.getParameter("pop"));
 			
-			String[] popStr = {"타피오카펄","치즈 타피오카펄","무지개 타피오카펄","젤리 펄"};
 			String[] colorStr = fruit.getColor();
 			String[] fruitStr = fruit.getFruit();
 			
+			String[] popStr = pop.getPop();
+			String[] popColorStr = pop.getColor();
+			
+			int pop_inedx = pop.getPop_index();
+
 			int[] index = fruit.getFruit_index();
 
 			int count = -1;
@@ -41,8 +47,10 @@
 			if(index[0]==fruit2 || index[1]==fruit2)
 				count++;
 			
-			if(pop_index==2)
+			if(choice_pop==pop_inedx)
 				count++;
+			System.out.println(choice_pop);
+			System.out.println(pop_inedx);
 
 			if (count >= 2){
 				out.println("<h2>성공하셨습니다!</h2>");
@@ -55,7 +63,7 @@
 				out.println("<p>선택하신 재료 배합 결과</p>");
 				out.println("음료1 : "+fruitStr[fruit1]+"<br>");
 				out.println("음료2 : "+fruitStr[fruit2]+"<br>");
-				out.println("펄 : "+popStr[pop_index]+"<br><br>");
+				out.println("펄 : "+popStr[choice_pop]+"<br><br>");
 				
 				
 
@@ -70,18 +78,15 @@
 			<div class="glass">
 				<div class="inner"
 					style="background:linear-gradient(to bottom, <%=colorStr[fruit1]%> 0%, <%=colorStr[fruit2]%> 100%);background-color:<%=fruit2%>;">
-					<div class="bubble"></div>
-					<div class="bubble"></div>
-					<div class="bubble"></div>
-					<div class="bubble"></div>
-					<div class="bubble"></div>
-					<div class="bubble"></div>
-					<div class="bubble"></div>
-					<div class="bubble"></div>
-					<div class="bubble"></div>
-					<div class="bubble"></div>
-					<div class="bubble"></div>
-					<div class="bubble"></div>
+					
+					<%
+					for(int i=0;i<12;i++){
+						out.println("<div class='bubble' style='background-color:"+popColorStr[choice_pop]+";opacity:0.4;'></div>");
+					}
+					
+					%>
+					
+				
 				</div>
 			</div>
 		</div>

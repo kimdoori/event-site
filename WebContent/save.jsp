@@ -1,3 +1,4 @@
+<%@page import="model.Pop"%>
 <%@page import="model.Fruit"%>
 <%@page import="database.FruitDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -12,24 +13,26 @@
 	<%
 		request.setCharacterEncoding("utf-8");
 
-		Fruit fruit = new Fruit();
 		String[] fruitStr = request.getParameterValues("fruit");
 		String[] colorStr = request.getParameterValues("color");
 		String[] indexStr = request.getParameterValues("index");
+		String[] popStr = request.getParameterValues("pop");
+		String[] popColorStr = request.getParameterValues("pop_color");
 		
+		int pop_index = Integer.valueOf(request.getParameter("pop_index"));
+
+
 		int[] index = new int[2];
 		
 		for (int i = 0; i < index.length; i++) {
 			index[i] = Integer.valueOf(indexStr[i]);
 		}
-
-		fruit.setFruit(fruitStr);
-		fruit.setColor(colorStr);
-		fruit.setFruit_index(index);
-
-		int return_code = FruitDAO.getInstance().update(fruit);
 		
-		System.out.println(return_code);
+		Fruit fruit = new Fruit(fruitStr,colorStr,index);
+		Pop pop = new Pop(popStr,pop_index,popColorStr);
+
+		int return_code1 = FruitDAO.getInstance().update(fruit);
+		int return_code2 = FruitDAO.getInstance().update(pop);
 		
 		response.sendRedirect("adminPage.jsp");
 		

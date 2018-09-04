@@ -91,7 +91,6 @@ section{
 .bubble:nth-child(1) {
   position: absolute;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.4);
   width: 10px;
   height: 10px;
   top: 98px;
@@ -111,7 +110,6 @@ section{
 .bubble:nth-child(2) {
   position: absolute;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.4);
   width: 10px;
   height: 10px;
   top: 302px;
@@ -131,7 +129,6 @@ section{
 .bubble:nth-child(3) {
   position: absolute;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.4);
   width: 10px;
   height: 10px;
   top: 22px;
@@ -151,7 +148,6 @@ section{
 .bubble:nth-child(4) {
   position: absolute;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.4);
   width: 10px;
   height: 10px;
   top: 26px;
@@ -171,7 +167,6 @@ section{
 .bubble:nth-child(5) {
   position: absolute;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.4);
   width: 10px;
   height: 10px;
   top: 142px;
@@ -191,7 +186,8 @@ section{
 .bubble:nth-child(6) {
   position: absolute;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.4);
+/*   background-color: rgba(255, 255, 255, 0.4);
+ */
   width: 10px;
   height: 10px;
   top: 304px;
@@ -211,7 +207,6 @@ section{
 .bubble:nth-child(7) {
   position: absolute;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.4);
   width: 10px;
   height: 10px;
   top: 288px;
@@ -231,7 +226,6 @@ section{
 .bubble:nth-child(8) {
   position: absolute;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.4);
   width: 10px;
   height: 10px;
   top: 197px;
@@ -251,7 +245,6 @@ section{
 .bubble:nth-child(9) {
   position: absolute;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.4);
   width: 10px;
   height: 10px;
   top: 225px;
@@ -271,7 +264,6 @@ section{
 .bubble:nth-child(10) {
   position: absolute;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.4);
   width: 10px;
   height: 10px;
   top: 206px;
@@ -291,7 +283,6 @@ section{
 .bubble:nth-child(11) {
   position: absolute;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.4);
   width: 10px;
   height: 10px;
   top: 77px;
@@ -311,7 +302,6 @@ section{
 .bubble:nth-child(12) {
   position: absolute;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.4);
   width: 10px;
   height: 10px;
   top: 170px;

@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.Fruit;
+import model.Pop;
 
 public class FruitDAO {
 
@@ -67,11 +68,9 @@ public class FruitDAO {
 			int[] indexStr = fruit.getFruit_index();
 
 			for (int i = 0; i < fruitStr.length; i++) {
-				System.out.println(fruitStr[i]);
 				pstmt = connection.prepareStatement("insert into fruit values(?,?,?)");
 				pstmt.setString(1, fruitStr[i]);
 				pstmt.setString(2, colorStr[i]);
-				System.out.println(pstmt);
 				if (indexStr[0] == i || indexStr[1] == i)
 					pstmt.setInt(3, 1);
 				else
@@ -161,5 +160,117 @@ public class FruitDAO {
 		return fruit;
 
 	}
+	
+	public int update(Pop pop) {
+		PreparedStatement pstmt = null;
+
+		int return_code = -1;
+
+		try {
+
+			pstmt = connection.prepareStatement("delete from pop");
+			pstmt.executeUpdate();
+
+			String[] popStr = pop.getPop();
+			String[] popColorStr = pop.getColor();
+			
+			
+			int index = pop.getPop_index();
+
+			for (int i = 0; i < popStr.length; i++) {
+				pstmt = connection.prepareStatement("insert into pop values(?,?,?)");
+				pstmt.setString(1, popStr[i]);
+				pstmt.setString(2, popColorStr[i]);
+
+				if (index == i)
+					pstmt.setInt(3, 1);
+				else
+					pstmt.setInt(3, 0);
+				
+				pstmt.executeUpdate();
+
+			}
+
+
+			return_code = 0;
+
+		} catch (SQLException e) {
+
+			System.out.println("업데이트에 실패했습니다.");
+			e.printStackTrace();
+			return_code = 1;
+
+		} finally {
+
+			if (pstmt != null)
+				try {
+					pstmt.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+
+		}
+		return return_code;
+	}
+
+	
+	// 모든 게시물 조회
+		public Pop selectPop() {
+
+			PreparedStatement pstmt = null;
+
+			ResultSet rs = null;
+			Pop pop = new Pop();
+
+			try {
+
+				pstmt = connection.prepareStatement("select * from pop order by pop");
+
+				rs = pstmt.executeQuery();
+
+				String[] popStr = new String[4];
+				String[] colorStr = new String[4];
+				
+				
+				int menuIndex=0;
+
+				int i = 0;
+
+				while (rs.next()) {
+
+					popStr[i] = rs.getString("pop");
+					colorStr[i] = rs.getString("color");
+
+					if (rs.getInt("menu") == 1)
+						menuIndex = i;
+					i++;
+
+				}
+				
+				pop.setPop(popStr);
+				pop.setColor(colorStr);
+				pop.setPop_index(menuIndex);
+				
+				
+
+			} catch (SQLException e) {
+
+				System.out.println("모든 게시글 조회에 실패했습니다.");
+				e.printStackTrace();
+
+			} finally {
+
+				if (pstmt != null)
+					try {
+						pstmt.close();
+					} catch (SQLException e) {
+						e.printStackTrace();
+
+					}
+			}
+
+			return pop;
+
+		}
 
 }
