@@ -31,6 +31,8 @@
 		
 		System.out.println(return_code);
 		
+		response.sendRedirect("adminPage.jsp");
+		
 	%>
 </body>
 </html>

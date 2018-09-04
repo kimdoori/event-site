@@ -9,6 +9,8 @@
 <title>결과</title>
 <link rel="stylesheet" href="css/result.css">
 <link rel="stylesheet" href="css/button.css">
+<link rel="stylesheet" href="css/blur.css">
+
 
 <link
 	href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700'
@@ -23,9 +25,12 @@
 
 			int fruit1 = Integer.valueOf(request.getParameter("fruit1"));
 			int fruit2 = Integer.valueOf(request.getParameter("fruit2"));
-			int pop = Integer.valueOf(request.getParameter("pop"));
-
+			int pop_index = Integer.valueOf(request.getParameter("pop"));
+			
+			String[] popStr = {"타피오카펄","치즈 타피오카펄","무지개 타피오카펄","젤리 펄"};
 			String[] colorStr = fruit.getColor();
+			String[] fruitStr = fruit.getFruit();
+			
 			int[] index = fruit.getFruit_index();
 
 			int count = -1;
@@ -36,13 +41,25 @@
 			if(index[0]==fruit2 || index[1]==fruit2)
 				count++;
 			
-			if(pop==2)
+			if(pop_index==2)
 				count++;
 
-			if (count >= 2)
-				out.println("<h2>성공!</h2>");
-			else
-				out.println("<h2>실패</h2>");
+			if (count >= 2){
+				out.println("<h2>성공하셨습니다!</h2>");
+				out.println("<p>재료를 모두 맞추셨습니다.</p>");
+
+			}
+			else{
+				out.println("<h2>실패하셨습니다.</h2>");
+				out.println("<p>다음에 다시 도전해주세요:)</p>");
+				out.println("<p>선택하신 재료 배합 결과</p>");
+				out.println("음료1 : "+fruitStr[fruit1]+"<br>");
+				out.println("음료2 : "+fruitStr[fruit2]+"<br>");
+				out.println("펄 : "+popStr[pop_index]+"<br><br>");
+				
+				
+
+			}
 		%>
 
 
@@ -74,8 +91,15 @@
 
 		<%
 			if (count >= 2) {
+				
 		%>
-		쿠폰번호
+		<form action="coupon.jsp">
+		<br><br>
+		전화번호
+		<input type="tel" name="phone" placeholder="010-0000-0000" required>
+		<button class="page-button">응모권 받기</button>
+		</form>
+		<%-- 쿠폰번호
 		<%
 			if (session.getAttribute("coupon") != null)
 					out.println(session.getAttribute("coupon"));
@@ -86,8 +110,11 @@
 		%>
 		<br>
 		사용 기한 2018.09.01 ~ 2018.11.28
-
+ --%>
 		<%
+			}else{
+				out.println("<button class='page-button' onclick='goStart()'>다시 시도하기</button>");	
+			
 			}
 		%>
 
@@ -95,7 +122,12 @@
 
 
 	</section>
+<script>
+function goStart(){
+	location.href="page1.jsp";
+}
 
+</script>
 
 </body>
 </html>

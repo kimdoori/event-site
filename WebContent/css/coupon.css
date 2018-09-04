@@ -1,6 +1,3 @@
-<html>
-<head>
-<style>
 
   @import url(https://fonts.googleapis.com/css?family=Arvo);
   body{
@@ -77,22 +74,4 @@
         margin-top:50px;
         padding:5px;
         background:rgba(0,0,0,0.5);
-    }</style>
-</head>
-<body>
-  <div class="box">
-        <div class='inner'>
-        <h1>JUJU New menu free coupon</h1>
-        <div class='info clearfix'>
-            <div class='wp'>Tickets<h2>1</h2></div>
-            <div class='wp'>Code<h2></h2></div>
-        </div>
-        <div class='total clearfix'>
-            <h2>Phone : <p>010-0000-0000</p></h2>
-        </div>
-        </div>
-    </div>
-
-</body>
-</html>  
-  
+    }

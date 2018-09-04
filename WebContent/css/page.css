@@ -1,15 +1,16 @@
-body, html{
-	padding:0px;
-	margin:0px;
-	
-	
+body, html {
+	padding: 0px;
+	margin: 0px;
 }
-div.wrap{
-	width: 100%;
-	height: 100vh;
-	background: url('../img/main.jpg') no-repeat;
-	background-size: cover;
+
+.back-img {
+	display: inline-block;
+	margin: auto;
+	opacity: 0.8 !important;
+	filter: alpha(opacity = 50);
+	z-index: -1;
 }
+
 .go-button {
 	width: 10em;
 	height: 4em;
@@ -19,12 +20,92 @@ div.wrap{
 	border-radius: 2em;
 	margin-top: 5em;
 }
+
 #title {
-	margin: 50px auto;
-	display:inline-block;
-	font-size: 30px;
+	margin: 20px auto;
+	display: inline-block;
+	font-size: 35px;
+	font-weight:bold;
 	font-family: 'Kaushan Script', cursive;
 	line-height: 20px;
 	color: #fddc57;
-	
+}
+
+.event-container {
+	width: 90%;
+	height: 80%;
+	display: inline-block;
+	margin: auto;
+}
+
+.event-container:after {
+	background-color: #000;
+	opacity: 0.5 !important;
+	filter: alpha(opacity = 50);
+}
+
+.box {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	font-family: Helvetica;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.13);
+	padding: 30px 0px;
+}
+
+.box h1 {
+	text-align: center;
+	margin: 30px 0;
+	font-size: 30px;
+}
+
+.box input {
+	display: block;
+	width: 300px;
+	margin: 20px auto;
+	padding: 15px;
+	background: rgba(0, 0, 0, 0.2);
+	color: #fff;
+	border: 0;
+}
+
+.box input:focus, .box input:active, .box button:focus, .box button:active
+	{
+	outline: none;
+}
+
+.box button {
+	background: #2ecc71;
+	border: 0;
+	color: #fff;
+	padding: 10px;
+	font-size: 20px;
+	width: 330px;
+	margin: 20px auto;
+	display: block;
+	cursor: pointer;
+}
+
+.box button:active {
+	background: #27ae60;
+}
+
+.box p {
+	font-size: 14px;
+	text-align: center;
+}
+
+.box p span {
+	cursor: pointer;
+	color: #666;
+}
+
+.inner-container {
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	top: calc(50vh - 200px);
+	left: calc(50vw - 200px);
+	overflow: hidden;
 }

@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/page.css">
 <link rel="stylesheet" href="css/pop.css">
+<link rel="stylesheet" href="css/blur.css">
 
 <script>
 	function prev() {
@@ -17,9 +18,9 @@
 <body>
 	<%
 		String fruit1 = request.getParameter("fruit1");
-		System.out.println(fruit1+"fruit1");
+		//System.out.println(fruit1+"fruit1");
 		String fruit2 = request.getParameter("fruit2");
-		System.out.println(fruit1+"fruit2");
+		//System.out.println(fruit1+"fruit2");
 
 	%>
 	<form action="resultPage.jsp" method="get">
@@ -52,9 +53,9 @@
 
 		</section>
 
-		<button type="button" class="go-button" onclick="prev()">Prev</button>
+		<button class="page-button" onclick="go()">GO</button>
+		<button type="button" class="page-button" onclick="prev()">Prev</button>
 
-		<button class="go-button" onclick="go()">GO</button>
 
 	</form>
 </body>

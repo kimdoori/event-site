@@ -2,8 +2,7 @@ window.onload = init;
 
 var cupIndex = [ -1, -1 ];
 
-var color = [ "#fffee0", "purple", "Crimson", "yellow", "LawnGreen",
-		"orange", "LavenderBlush", "Gold" ];
+
 
 function init() {
 
@@ -19,6 +18,16 @@ function init() {
 var myFunction = function() {
 	var index = this.getAttribute("id");
 	var position = this.style.position == "" ? "static" : this.style.position;
+	
+	var color = [ "#fffee0", "purple", "Crimson", "yellow", "LawnGreen",
+		"orange", "LavenderBlush", "Gold" ];
+	
+	
+	var colorInput = document.getElementsByClassName("color");
+	for (var i = 0; i < colorInput.length; i++) {
+		color[i]=colorInput[i].value;
+	}
+
 
 	if (position == "static") {
 

@@ -26,6 +26,7 @@ public class FruitDAO {
 
 			connection = DriverManager.getConnection(
 					"jdbc:mysql://localhost:3306/juju?useUnicode=true&characterEncoding=utf8", "root", "doori0228!");
+			System.out.println("연결");
 
 		} catch (SQLException e) {
 

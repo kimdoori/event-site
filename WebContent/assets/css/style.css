@@ -113,6 +113,7 @@ viewport {
 /*text color*/
 #logo {
 	font-size: 30px;
+	font-weight:bold;
 	font-family: 'Kaushan Script', cursive;
 	line-height: 20px;
 	color: #fddc57;

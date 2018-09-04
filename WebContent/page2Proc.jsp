@@ -12,6 +12,8 @@
 	href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700'
 	rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/page.css">
+<link rel="stylesheet" href="css/blur.css">
+
 
 <script src="js/page2.js"></script>
 <script>
@@ -22,21 +24,23 @@
 
 </head>
 <body>
-<%
-	Fruit fruit = FruitDAO.getInstance().select();
-
-%>
+	<%
+		Fruit fruit = FruitDAO.getInstance().select();
+		String[] colorStr = fruit.getColor();
+		for (int i = 0; i < colorStr.length; i++) {
+			out.println("<input type='hidden' class='color' value='"+colorStr[i]+"'></input>");
+		}
+	%>
 
 	<section id="fruit-button-container">
-	
+
 		<%
 			String[] fruitStr = fruit.getFruit();
-			for(int i=0;i<fruitStr.length;i++){
-				out.println("<a id = '"+i+"' class='fruit'>"+fruitStr[i]+"</a>");
+			for (int i = 0; i < fruitStr.length; i++) {
+				out.println("<a id = '" + i + "' class='fruit'>" + fruitStr[i] + "</a>");
 			}
-		
 		%>
-		
+
 
 	</section>
 
@@ -58,8 +62,9 @@
 		</div>
 
 	</section>
-	<button class="go-button" onclick="prev()">Prev</button>
 
-	<button class="go-button" onclick="go()">GO</button>
+	<button class="page-button" onclick="go()">GO</button>
+	<button class="page-button" onclick="prev()">Prev</button>
+
 </body>
 </html>
